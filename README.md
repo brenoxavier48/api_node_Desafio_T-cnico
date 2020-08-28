@@ -30,13 +30,15 @@ Esta lista de chamados será exibida para o cliente através de um painel (front
 
 3. Retornar para o front-end um objeto JSON com a lista de chamados e um resumo da quantidade de chamados retornados assim como a somatória de todos os apontamentos de horas nos chamados, ex.:
 
-	```js
+```js
+
 	{
 		"totalIssue": 23, // quantidade de chamados retornados
 		"totalTimeSpent": 3120, // somatória de todos os apontamentos em segundos
 		"items": [...] // lista de todos os chamados que atendem o filtro
 	}
-	```
+
+```
 
 4. Para cada chamado (propriedade 'items' acima), deve-se retornar um objeto com as seguintes informações para o front-end: Número do Chamado (`key`), Nome do tipo de chamado (`issuetype`), Descrição da Urgência (`priority`), Título do Chamado (`summary`), Solicitante - nome, email e avatar (`reporter`), Data da Abertura do Chamado (`created`), Responsável pelo chamado - nome, email e avatar (`assignee`), Status atual do chamado (`status`), Somatória do tempo apontado no chamado dentro do período (`timespent`)
 
@@ -45,34 +47,46 @@ Para iniciar o desenvolvimento da sua solução, faça um _fork_ deste repositó
 
 1. Crie um _clone_ desse repositório (https://support.atlassian.com/bitbucket-cloud/docs/clone-a-repository/)
 
-	```bash
+
+```bash
+
 	$ git clone https://<seu_usuario>@bitbucket.org/innovme/desafio-innov.me-1.git
-	```
-	
+
+```
+
+
 2. Crie uma _branch_ com o seu nome (https://support.atlassian.com/bitbucket-cloud/docs/branch-a-repository/)
 
-	```bash
+```bash
+
 	$ git branch <branch_com_seu_nome>
-	```
+
+```
 	
 3. Inicie o desenvolvimento da sua aplicação (pode fazer quantos _commits_ quiser)
 
-    ```bash
-    $ git add .
-    $ git commit -m "descrição da sua implementação"
-    ```
+```bash
+
+	$ git add .
+	$ git commit -m "descrição da sua implementação"
+
+```
 
 4. Quando estiver pronto, envie sua _branch_ para o repositório no servidor do bitBucket
 
-    ```bash
-    $ git push origin <branch_com_seu_nome>
-    ```
+```bash
+
+	$ git push origin <branch_com_seu_nome>
+
+```
 
 4. Quando achar que é hora de entregar o seu projeto para avaliação, envie-nos seu código via _pull request_ (https://bitbucket.org/product/guides/basics/four-starting-steps?tab=2#step-1-put-your-code-in-bitbucket)
+
     > Obs.: faça o _pull request_ acessando a página do repositório diretamente no site do bitBucket
 
 ## 5. Sobre a avaliação
 Segue a lista dos itens que serão considerados na avaliação da sua solução (na ordem de importância):
+
 * Interpretação do Problema
 * Eficácia da Solução (ela resolve o problema?)
 * Eficiência da Solução (ela resolve o problema da melhor maneira possível, com o menor desperdício de tempo, esforço e recursos?)
@@ -90,7 +104,9 @@ Toda a documentação da API do Jira Cloud pode ser encontrada em: https://devel
 Sugerimos utilizar o endpoint https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-search/#api-rest-api-3-search-post, mas você está livre para usar os endpoints que achar necessário para atingir o objetivo.
 Caso opte por utilizar o endpoint `/rest/api/3/search` segue body de exemplo:
 
+
 ```json
+
 	{
 		"expand": [],
 		"fields": ["worklog"],
@@ -99,7 +115,9 @@ Caso opte por utilizar o endpoint `/rest/api/3/search` segue body de exemplo:
 		"fieldsByKeys": true,
 		"startAt": 0
 	}
+
 ```
+
 
 As credenciais de acesso (Token) à API do Jira Cloud assim como os códigos de clientes para consultas de teste, serão informados para os candidatos individualmente.
 
@@ -110,4 +128,4 @@ Se precisar de mais informações sobre _issues_ do repositório:
 * [Como criar Issue](https://support.atlassian.com/bitbucket-cloud/docs/create-an-issue-in-bitbucket-cloud/)
 
 ## Em caso de dúvidas
-Quaisquer dúvidas que você venha a ter, consulte as _issues_ desse repositório no portal do bitBucket para ver se alguém já não a fez e caso você não ache sua resposta, abra você mesmo uma nova _issue_.
+Quaisquer dúvidas que você venha a ter, consulte as _issues_ desse repositório (https://bitbucket.org/innovme/desafio-innov.me-1/issues) no portal do bitBucket para ver se alguém já não a fez e caso você não ache sua resposta, abra você mesmo uma nova _issue_.
