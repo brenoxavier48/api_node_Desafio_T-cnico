@@ -1,5 +1,6 @@
 # Desafio Innov.me #1
 
+
 ## 1. Desafio de negócio
 Atualmente a upFlow.me presta serviços de suporte técnico aos seus clientes através de um contrato recorrente de suporte à software baseado em horas trabalhadas.
 Cada cliente tem contratado uma determinada quantidade de horas mensais, onde, essas horas são "utilizadas" ao longo do mês, e caso sejam executadas mais horas do que foram contratadas, o cliente deverá pagar horas avulsas naquele mês.
@@ -124,6 +125,7 @@ As credenciais de acesso (Token) à API do Jira Cloud assim como os códigos de 
 Se precisar de mais informações sobre _pull request_ segue material muito útil: https://www.atlassian.com/br/git/tutorials/making-a-pull-request
 
 Se precisar de mais informações sobre _issues_ do repositório:
+
 * [O que são Issues](https://bitbucket.org/product/guides/basics/bitbucket-interface#issues)
 * [Como criar Issue](https://support.atlassian.com/bitbucket-cloud/docs/create-an-issue-in-bitbucket-cloud/)
 
