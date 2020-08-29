@@ -44,7 +44,7 @@ Esta lista de chamados será exibida para o cliente através de um painel (front
 4. Para cada chamado (propriedade 'items' acima), deve-se retornar um objeto com as seguintes informações para o front-end: Número do Chamado (`key`), Nome do tipo de chamado (`issuetype`), Descrição da Urgência (`priority`), Título do Chamado (`summary`), Solicitante - nome, email e avatar (`reporter`), Data da Abertura do Chamado (`created`), Responsável pelo chamado - nome, email e avatar (`assignee`), Status atual do chamado (`status`), Somatória do tempo apontado no chamado dentro do período (`timespent`)
 
 ## 4. Submissão
-Para iniciar o desenvolvimento da sua solução, faça um _fork_ deste repositório, crie uma _branch_ com o seu nome completo e faça _commits_ como achar melhor ao longo do desenvolvimento da sua aplicação, e depois de concluída, envie-nos o _pull request_. Se você apenas clonar o repositório não vai conseguir fazer _push_ e vai ser mais complicado fazer o _pull request_.
+Para iniciar o desenvolvimento da sua solução, siga as instruções abaixo:
 
 1. Crie um _clone_ desse repositório (https://support.atlassian.com/bitbucket-cloud/docs/clone-a-repository/)
 
