@@ -10,3 +10,7 @@ export interface HttpResponse {
 export interface Controller {
   handler (httpRequest: HttpRequest): Promise<HttpResponse>
 }
+
+export interface Validator {
+  isValid(data: any): boolean
+}
