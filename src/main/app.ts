@@ -1,12 +1,13 @@
 import express, {Request, Response} from 'express'
 import bodyParser from 'body-parser'
 import { SearchIssuesController } from '../presentation/controllers/searchIssuesController'
-import { OrganizationValidator } from '../utils/organizationValidator'
+import { OrganizationValidator, DateValidator } from '../utils'
 
 const app = express()
 app.use(bodyParser.json())
 const organizationValidator = new OrganizationValidator()
-const searchIssuesController = new SearchIssuesController(organizationValidator)
+const dateValidator = new DateValidator()
+const searchIssuesController = new SearchIssuesController(organizationValidator, dateValidator)
 app.post('/test', async (req: Request, resp: Response) => {
   const httpResponse = await searchIssuesController.handler(req)
   resp.json(httpResponse)

@@ -4,9 +4,11 @@ import { MissingParamError, InvalidParamError } from '../errors'
 
 export class SearchIssuesController implements Controller {
   private readonly organizationValidator: Validator
+  private readonly dateValidator: Validator
 
-  constructor (organizationValidator: Validator) {
+  constructor (organizationValidator: Validator, dateValidator: Validator) {
     this.organizationValidator = organizationValidator
+    this.dateValidator = dateValidator
   }
 
   async handler (httpRequest: HttpRequest): Promise<HttpResponse> {
@@ -17,10 +19,14 @@ export class SearchIssuesController implements Controller {
       if (isMissingParams) return badRequest(new MissingParamError('"organizationCod", "initialDate", "finalDate"'))
 
       const { organizationCod, initialDate, finalDate } = httpRequest.body
-      const organizationIsValid = this.organizationValidator.isValid(organizationCod)
 
-      if (!organizationIsValid) return badRequest(new InvalidParamError('organizationCod'))
+      const isOrganizationValid = this.organizationValidator.isValid(organizationCod)
+      if (!isOrganizationValid) return badRequest(new InvalidParamError('organizationCod'))
+      
+      const isDateValid =  this.dateValidator.isValid({initialDate,finalDate})
+      if (!isDateValid) return badRequest(new InvalidParamError('dates'))
 
+      
       return {
         statusCode: 400,
         body:{empty: true}
