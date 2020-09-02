@@ -38,7 +38,8 @@ A API possui um endpoint, para utilizá-lo, é necessário realizar uma requisi�
  - Método: POST
  - Body da requisição: 
 
- ```json
+
+```json
 
 	{
 		"initialDate": "2020-02-15", // Data inicial de busca respeitando o formato YYYY-MM-DD
@@ -48,7 +49,9 @@ A API possui um endpoint, para utilizá-lo, é necessário realizar uma requisi�
 
 ```
 
+
 É recomendado utilizar algum software que realize requisições HTTP, por exemplo Postman, mas segue abaixo um exemplo de requisição pelo console do navegador:
+
 
 ```js
 
@@ -65,6 +68,7 @@ A API possui um endpoint, para utilizá-lo, é necessário realizar uma requisi�
   }).then(resp => resp.json())
 
 ```
+ 
  
  Lembrando que as datas precisam estar no formato YYYY-MM-DD, e o organizationCod precisa ser um código de organização válido dentre os seguintes: 
   - BRZ Empreendimentos
