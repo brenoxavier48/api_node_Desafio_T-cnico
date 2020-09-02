@@ -12,5 +12,15 @@ export interface Controller {
 }
 
 export interface Validator {
-  isValid(data: any): boolean
+  isValid (data: any): boolean
+}
+
+export interface ApiAdapter {
+  post (url: string, body: any): Promise<any>
+}
+
+export interface DataRequest {
+  organizationCod: string
+  initialDate: string
+  finalDate: string
 }
