@@ -38,7 +38,7 @@ A API possui um endpoint, para utilizá-lo, é necessário realizar uma requisi�
  - Método: POST
  - Body da requisição: 
 
- ```js
+ ```json
 
 	{
 		"initialDate": "2020-02-15", // Data inicial de busca respeitando o formato YYYY-MM-DD
