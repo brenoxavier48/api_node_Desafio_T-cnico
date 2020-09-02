@@ -51,17 +51,19 @@ A API possui um endpoint, para utilizá-lo, é necessário realizar uma requisi�
 É recomendado utilizar algum software que realize requisições HTTP, por exemplo Postman, mas segue abaixo um exemplo de requisição pelo console do navegador:
 
 ```js
-await fetch('http://localhost:8080/issues/search', {
-  method: 'POST',
-  headers: {
-  'Content-Type':'application/json'
-  },
-  body: JSON.stringify({
-      initialDate: '2020-02-12',
-      finalDate: '2020-09-12',
-      organizationCod: 'ACPL'
-  })
-}).then(resp => resp.json())
+
+  await fetch('http://localhost:8080/issues/search', {
+    method: 'POST',
+    headers: {
+    'Content-Type':'application/json'
+    },
+    body: JSON.stringify({
+        initialDate: '2020-02-12',
+        finalDate: '2020-09-12',
+        organizationCod: 'ACPL'
+    })
+  }).then(resp => resp.json())
+
 ```
  
  Lembrando que as datas precisam estar no formato YYYY-MM-DD, e o organizationCod precisa ser um código de organização válido dentre os seguintes: 
