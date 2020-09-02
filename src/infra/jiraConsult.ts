@@ -45,7 +45,7 @@ export class JiraConsult {
 
       dataResponse.totalTimeSpent += Number(fields.timespent)
 
-      let processedIssue: ItemResponse = {}
+      let processedIssue = <ItemResponse>{}
 
       processedIssue.key = String(key)
       processedIssue.issuetype = String(fields.issuetype.name)
@@ -73,12 +73,9 @@ export class JiraConsult {
           avatar: 'No one designated'
         }
       }
-
       return processedIssue
     })
-
     dataResponse.items = processedIssues
-
     return dataResponse
   }
 }
