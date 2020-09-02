@@ -24,3 +24,5 @@ export interface DataRequest {
   initialDate: string
   finalDate: string
 }
+
+export * from './dataResponse'
