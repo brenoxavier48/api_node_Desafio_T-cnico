@@ -44,10 +44,9 @@ Para cada chamado (propriedade 'items' acima), deve-se retornar um objeto com as
 
  PORT=8080
  URL_JIRA_API='https://upflow.atlassian.net'
- TOKEN_JIRA='dWF0FTVzQHVwZtyvdy4ISHp5MmZsZ1pKNkNwNGhicB070lRGNTlKWTM='
+ TOKEN_JIRA=''
 
 ```
- O token acima serve apenas de exemplo.
 
 4. Iniciar a aplicação executando o comando:
 ```bash
