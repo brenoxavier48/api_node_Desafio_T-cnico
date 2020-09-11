@@ -11,7 +11,7 @@ Utilizar as informações advindas do front-end para consultar a API do Jira Clo
 
 Retornar para o front-end um objeto JSON com a lista de chamados e um resumo da quantidade de chamados retornados assim como a somatória de todos os apontamentos de horas nos chamados, ex.:
 
-```json
+```js
 
     {
         "totalIssue": 23, // quantidade de chamados retornados
@@ -64,7 +64,7 @@ A API possui um endpoint, para utilizá-lo, é necessário realizar uma requisi�
  - Body da requisição: 
 
 
-```json
+```js
 
 	{
 		"initialDate": "2020-02-15", //Data inicial de busca respeitando o formato YYYY-MM-DD
